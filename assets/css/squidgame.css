@@ -1,0 +1,512 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: "Game of Squids";
+  src: url("../fonts/game_of_squids/Game\ Of\ Squids.ttf") format('truetype');
+}
+
+
+h1 {
+  font-family: "Game of Squids", sans-serif;
+  font-size: 3.0em;
+  color: #E6E6E4;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000;
+}
+
+body {
+  background-color: #037a76;
+  color: #E7E7E5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.intro {
+  padding: 35px;
+ 
+  margin: 20px auto;
+ 
+}
+
+@media screen and (max-width: 768px) {
+ video{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+  } 
+ 
+  
+}
+.hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #E7E7E5;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.hero {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url("../images/AAAABYVxx70Tsy2LY_X9PIODgATpFf9ml4HptRoFGbaxQMiVCDz5SRWKl7HgkrIvJ79ONFoIYGOlDEIGnauiRbTq5co86K7Cm6_yqivZ.webp");  background-size: cover;
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero{
+    background-position: center;
+    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 20px 5px;
+  }
+    
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  text-align: left;
+  
+}
+
+.details-content {
+  max-width: 600px;
+  margin-left: 20px;
+  
+}
+
+
+.details-content ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  list-style-type: none;
+  padding: 0;
+  
+
+}
+
+.details img {
+  width:100%;
+  height: 360px;
+  border-radius: 10px;
+  
+  
+}
+
+@media screen and (max-width: 768px) {
+  .details {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .details img {
+    max-width: 100%;
+    padding: 15px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+    
+}
+
+.details hr {
+  border: none;
+  height: 1px;
+  background-color: #E7E7E5;
+  margin: 0 1px;
+}
+
+.details h2 {
+  font-family: "Game of Squids", sans-serif;
+  padding-left: 1px;
+}
+
+.characters-list {
+  display: flex;
+  flex-direction: row; 
+  margin-left: 50px;
+  margin-top: 30px;
+  width: 95%;
+  
+}
+
+.characters{
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(30px); 
+  background:  #029a94; 
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.765);
+}
+.staff{
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(30px); 
+  background: #037A76;
+background: linear-gradient(180deg, rgba(3, 122, 118, 1) 0%, rgba(255, 255, 255, 1) 45%, rgba(0, 0, 0, 1) 58%, rgba(252, 0, 0, 1) 100%);
+  color: #037a76;
+}
+
+.character-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .characters-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+ 
+
+  .character-grid {
+    width: 100%;
+  }
+}
+
+.details h2 {
+  font-family: "Game of Squids", sans-serif;
+  padding-left: 1px;
+}
+
+
+.mini-title {
+  font-family: "Game of Squids", sans-serif;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+
+.characters-list H2 {
+  
+  font-size: 2.5rem;
+
+}
+.characters-list img{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.search-box {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  
+}
+
+.filter-box{
+    font-family: "Game of Squids", sans-serif;
+
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+.sidefilter {
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+form input{
+  width: 20rem;
+  padding: 7px;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  background-color:transparent;
+  color: #ADADAD;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+
+.btn {
+  text-decoration: none;
+  padding: 5Px;
+  border-radius: 5px;
+  
+  margin-right: 3px;
+  color: #E7E7E5;
+  background-color: #ed1b76;
+}
+
+.btn:hover {
+  background-color: #E7E7E5;
+  color: #ed1b76;
+}
+
+.active{
+  color: #ed1b76;
+  background-color: #E7E7E5;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+
+#store-products {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  margin: 20px 100px;
+}
+
+#store-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 20px 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  #store-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #store-products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.page-btn {
+  padding: 8px 12px;
+  border: none;
+   color: #E7E7E5;
+  background-color: #ed1b76;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.page-btn.active {
+  color: #ed1b76;
+  background-color: #E7E7E5
+}
+
+select{
+  
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ed1b76;
+  color: #E7E7E5;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left:100PX;
+  margin-top: 20px;
+}
+
+option {
+  color: #ed1b76;
+  background-color: #E7E7E5;
+  border-radius: 10px;
+}
+
+.episode-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  margin: 20px 100px;
+}
+
+.episode img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.episode-list h3, p {
+  margin: 10px 0;
+}
+
+.episode {
+  
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px); 
+  background: rgba(0, 0, 0, 0.4); 
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 1024px) {
+  .episode-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px ;
+  }
+
+  .episode {
+    padding: 0.5rem;
+  }
+  
+}
+
+.game-info{
+    font-family: "Game of Squids", sans-serif;
+    margin: 40px;
+    text-align: center;
+
+}
+.game-carousel {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  margin-left: 25%;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .game-carousel {
+    width: 90%;
+    height: 250px;
+    margin-left: 5%;
+  }
+  
+}
+
+.game-carousel .game-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.game-carousel .game-slide-container {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+
+.game-carousel .game-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.game-carousel .game-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 1em;
+}
+
+.game-carousel .game-slide-container:hover .game-description {
+  opacity: 1;
+}
+
+.game-carousel .game-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+}
+
+.game-carousel .game-prev {
+  left: 10px;
+}
+
+.game-carousel .game-next {
+  right: 10px;
+}
+
+.game-carousel .game-pagination {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.game-carousel .game-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.game-carousel .game-dot.active {
+  background: #ffffff;
+}
