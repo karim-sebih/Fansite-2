@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", smoothScroll);
   });
 
-  function smoothScroll(e) {
+function smoothScroll(e) {
+  const targetId = this.getAttribute("href");
+  // Only prevent default and smooth scroll for hash links
+  if (targetId.startsWith("#") && targetId !== "#") {
     e.preventDefault();
-    const targetId = this.getAttribute("href");
-    if (targetId === "#") return;
-
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       window.scrollTo({
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+}
 
   // 2. Add action buttons to all episode cards
   function addActionButtonsToCards() {
