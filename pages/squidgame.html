@@ -5,18 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/squidgame.css">
+      <script src="https://kit.fontawesome.com/ca3234fc7d.js" crossorigin="anonymous"></script>
+     <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 
     <title>Squid Game</title>
 </head>
 
 <body>
-    <header>
-        <nav>
+     <header>
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <div class="logo">
+                    <a href="">○△□</i></a>
+                </div>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#characters">Personnages</a></li>
+                    <li><a href="#episodes">Episodes</a></li>
+                    <li><a href="#games">Jeux</a></li>
+            
+                </ul>
+                <ul class="side-links">
+                
+                </ul>
+                <div class="burger-menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="burger-menu open">
+            <ul class="open-links">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#characters">Personnages</a></li>
+                    <li><a href="#episodes">Episodes</a></li>
+                    <li><a href="#games">Jeux</a></li>
+                </ul>
+
+                </div>
+            </ul>
+        </div>
         </nav>
     </header>
     <br>
     <main>
-        <section class="intro">
+        <section class="intro" >
             <div class="hero">
                 <h1>Welcome to <br><img
                         src="../assets/images/AAAABbj5bOy5PlkwtR3uxuM5LYn62HPfQjAEFYg0X-NqLZAmXC9D3yKJgf2w1OHqgn7QP179ffJI6TSVIwn6I8kAa6lTQaMT2nXZYQ.webp"
@@ -27,10 +64,11 @@
             </div>
         </section>
 
-        <section class="details">
-            <video src="../assets/images/episodes/Squid Game _ Official Trailer _ Netflix.mp4" play loop muted
+        <section class="details" id="about">
+            
+            <video src="../assets/images/episodes/Squid Game _ Official Trailer _ Netflix.mp4" autoplay loop muted
                 controls></video>
-            <div class="details-content">
+            <div class="details-content" >
                 <h2>About the Show</h2>
                 <hr>
                 <br>
@@ -51,7 +89,7 @@
                 </ul>
             </div>
         </section>
-        <div class="mini-title">
+        <div class="mini-title" id="characters">
             <H2>Characters</H2>
             <hr>
         </div>
@@ -72,6 +110,7 @@
                     <a href="#" class="btn  active" data-filter="season-2">Saison 2</a>
                     <a href="#" class="btn  active" data-filter="season-3">Saison 3</a>
                     <a href="#" class="btn  active" data-filter="staff">Vips/Staff</a>
+                    <a href="#" class="btn  active" data-filter="others">Autres</a>
                 </div>
             </div>
             <br>
@@ -79,119 +118,261 @@
                 <section class="container" id="store-products">
                     <div class="season-1 characters">
                         <img src="../assets/images/personnages/lee jung jae.jpeg" alt="photo de lee jung jae">
-                        <h3>Lee Jung-jae</h3>
-                        <p>Seong Gi-hun</p>
+                        <h3>Seong Gi-hun / Player 456</h3>
+                        <p> Acteur: Lee Jung-jae</p>
                         <div class="character-overlay">
-                            <p>Gi-hun is a down-on-his-luck man who becomes a contestant in the deadly game.</p>
+                            <p>Gi-hun est un homme malchanceux qui devient un concurrent dans le jeu mortel.</p>
                         </div>
                     </div>
 
                     <div class="season-1 characters">
                         <img src="../assets/images/personnages/park hae soo.jpeg" alt="photo de park hae soo">
-                        <h3>Park Hae-soo</h3>
-                        <p>Cho Sang-woo</p>
+                        <h3>Cho Sang-woo / Player 218</h3>
+                        <p> Acteur: Park Hae-soo</p>
                         <div class="character-overlay">
-                            <p>Sang-woo is Gi-hun's childhood friend and a brilliant strategist.</p>
+                            <p>Sang-woo est l'ami d'enfance de Gi-hun et un brillant stratège.</p>
                         </div>
                     </div>
                     <div class="season-1 characters staff">
                         <img src="../assets/images/personnages/Oh_Il-nam.webp" alt="photo de yang dong geun">
-                        <h3>Oh Yeong-Su</h3>
-                        <p>Oh Il-nam</p>
+                        <h3>Oh Il-nam / Player 001</h3>
+                        <p> Acteur: Oh Yeong-Su </p>
                         <div class="character-overlay">
-                            <p>Il-nam is an elderly contestant with a mysterious past.</p>
+                            <p>Il-nam est un concurrent âgé avec un passé mystérieux.</p>
                         </div>
                     </div>
 
                     <div class="season-1 characters">
                         <img src="../assets/images/personnages/Kang_Sae-byeok.webp" alt="photo de jung ho yeon">
-                        <h3>Jung Ho-yeon</h3>
-                        <p>Kang Sae-byeok</p>
+                        <h3> Kang Sae-byeok / Player 067</h3>
+                        <p>Actrice: Jung Ho-yeon</p>
                         <div class="character-overlay">
-                            <p>Sae-byeok is a North Korean defector with a tragic backstory.</p>
+                            <p>Sae-byeok est une transfuge nord-coréenne avec un passé tragique.</p>
                         </div>
                     </div>
 
-                    <div class="season-1 characters">
+                    <div class="season-1 characters others">
                         <img src="../assets/images/personnages/Hwang_Jun-ho.webp" alt="photo de hwang jun ho">
                         <h3>Hwang Jun-ho</h3>
-                        <p> Wi Ha-joon</p>
+                        <p>Acteur: Wi Ha-joon</p>
                         <div class="character-overlay">
-                            <p>Jun-ho is a police officer searching for his missing brother.</p>
+                            <p>Jun-ho est un policier à la recherche de son frère disparu.</p>
                         </div>
                     </div>
 
                     <div class="season-1 characters">
                         <img src="../assets/images/personnages/Abdul_Ali.webp" alt="photo de anupam tripathi">
-                        <h3>Anupam Tripathi</h3>
-                        <p>Abdul Ali</p>
+                        <h3>Abdul Ali / Player 199</h3>
+                        <p>Acteur: Anupam Tripathi</p>
                         <div class="character-overlay">
-                            <p>Ali is a Pakistani migrant worker who becomes a contestant.</p>
+                            <p>Ali est un travailleur migrant pakistanais qui devient un concurrent.</p>
                         </div>
                     </div>
 
                     <div class="season-1 characters">
                         <img src="../assets/images/personnages/Ji-yeong.webp" alt="photo de lee ji yeong">
-                        <h3>Lee Yoo-mi</h3>
-                        <p>Ji-yeong</p>
+                        <h3>Ji-yeong / Player 240</h3>
+                        <p> Actrice: Lee Yoo-mi</p>
                         <div class="character-overlay">
-                            <p>Ji-yeong is a young woman who becomes a key player in the game.</p>
+                            <p>Ji-yeong est une jeune femme qui devient un acteur clé dans le jeu.</p>
                         </div>
                     </div>
                     <div class="season-1 characters">
                         <img src="../assets/images/personnages/Jang_Deok-su.webp" alt="photo de heo sung tae">
-                        <h3>Heo Sung-tae</h3>
-                        <p>Jang Deok-su</p>
+                        <h3>Jang Deok-su / Player 101</h3>
+                        <p>Acteur: Heo Sung-tae</p>
                         <div class="character-overlay">
-                            <p>Deok-su is a gangster who uses intimidation to survive.</p>
+                            <p>Deok-su est un gangster qui utilise l'intimidation pour survivre.</p>
                         </div>
                     </div>
 
                     <div class="season-1 characters">
                         <img src="../assets/images/personnages/Han_Mi-nyeo.webp" alt="photo de han mi-nyeo">
-                        <h3>Kim Joo-ryeong</h3>
-                        <p>Han Mi-nyeo</p>
+                        <h3>Han Mi-nyeo / Player 212</h3>
+                        <p>Actrice: Kim Joo-ryeong</p>
                         <div class="character-overlay">
-                            <p>Mi-nyeo is a mysterious woman with a hidden agenda.</p>
+                            <p>Mi-nyeo est une femme mystérieuse avec un agenda caché.</p>
                         </div>
                     </div>
                     <div class="season-2 season-3 characters">
                         <img src="../assets/images/personnages/Seong_Gi-hun_2024.webp" alt="gi hun saison 2">
-                        <h3>Lee Jung-jae</h3>
-                        <p>Seong Gi-hun</p>
+                        <h3>Seong Gi-hun / Player 456</h3>
+                        <p>Acteur: Lee Jung-jae</p>
                         <div class="character-overlay">
-                            <p>Gi-hun returns to the game, now with a new purpose and allies.</p>
+                            <p>Gi-hun revient au jeu, désormais avec un nouvel objectif et de nouveaux alliés.</p>
                         </div>
                     </div>
                     <div class="season-2 season-3 characters staff">
                         <img src="../assets/images/personnages/Frontman-season3.webp" alt="frontman">
-                        <h3>Lee Byung-hun</h3>
-                        <p>Frontman</p>
+                        <h3>Frontman / Player 001</h3>
+                        <p>Acteur: Lee Byung-hun</p>
                         <div class="character-overlay">
-                            <p>The Frontman is the mysterious leader of the game.</p>
+                            <p>Le Frontman est le mystérieux leader du jeu.</p>
                         </div>
                     </div>
 
                     <div class="season-2 characters">
                         <img src="../assets/images/personnages/Park_Jung-bae.webp" alt="Park Jung-bae">
-                        <h3>Park Jung-bae</h3>
-                        <p>Park Jung-bae</p>
+                        <h3>Park Jung-bae / Player 390</h3>
+                        <p>Acteur: Lee Seo-hwan</p>
                         <div class="character-overlay">
-                            <p>Jung-bae is the best friend of Gi-hun.</p>
+                            <p>Jung-bae est le meilleur ami de Gi-hun.</p>
                         </div>
                     </div>
                     <div class="season-2  season-3 characters">
                         <img src="../assets/images/personnages/KangDae-ho.webp" alt="Kang Dae-ho">
-                        <h3>Kang Dae-ho</h3>
-                        <p>Gi-hun, I... I really tr... tried to do my best. I... wasn't a Marine, okay?</p>
+                        <h3>Kang Dae-ho / Player 388</h3>
+                        <p>Acteur: Kang Ha-neul</p>
+                        <div class="character-overlay">
+                            <p>Gi-hun, je... J'ai vraiment essayé... de faire de mon mieux. Je... n'étais pas un Marine,
+                                ok ?</p>
+                        </div>
+
                     </div>
 
-                    <div class="season-3 characters">
-                        <img src="../assets/images/personnages/Player333.webp" alt="">
-                        <h3>Player 333</h3>
-                        <p>Player 333 is a new contestant in Season 3.</p>
+                    <div class="season-2 season-3 characters">
+                        <img src="../assets/images/personnages/Player333.webp" alt="Player 333">
+                        <h3>Lee Myung-gi / Player 333</h3>
+                        <p>
+                            Im Si-wan</p>
+                        <div class="character-overlay">
+                            <p>Chaque fois que vous investissez, c'est à vous de prendre la décision finale en fonction de votre propre jugement.</p>
+                        </div>
+
+                    </div>
+                    <div class="season-1 characters others">
+                        <img src="../assets/images/personnages/Screenshot-2021-10-22-at-13.17.15-a8a4cc1.webp"
+                            alt="Kim Young-ok">
+                        <h3>Oh Mal-soon</h3>
+                        <p>Kim Young-ok</p>
+                        <div class="character-overlay">
+                            <p>Mère de Seong Gi-hun</p>
+                        </div>
+                    </div>
+                    <div class="season-1 season-3 characters others">
+                        <img src="../assets/images/personnages/GayeongSeason3.webp" alt="seong ga yeong">
+                        <h3>Seong Ga-yeong</h3>
+                        <p>Jo A-in</p>
+                        <div class="character-overlay">
+                            <p>Fille de Seong Gi-hun</p>
+                        </div>
+                    </div>
+                         <div class="season-2 season-3 characters">
+                        <img src="../assets/images/personnages/Cho_Hyun-ju_smiling_for_photo_ID.webp" alt="Cho Hyun-ju smiling for photo ID">
+                        <h3>Cho Hyun-ju / Player 120</h3>
+                        <p>Park Sung-hoon</p>
+                        <div class="character-overlay">
+                            <p>Hyun-ju s'est montrée attentionnée et hospitalière envers la plupart des joueurs qu'elle a croisés</p>
+                        </div>
+                         </div>
+
+                         <div class="season-2 season-3 characters">
+                        <img src="../assets/images/personnages/Bagsongsig.webp" alt="Park Yong-sik">
+                        <h3>Park Yong-sik / Player 007</h3>
+                        <p>Park Sung-hoon</p>
+                        <div class="character-overlay">
+                            <p>le fils adulte de Jang Geum-ja qui a participé au concours Squid Game afin de payer ses dettes de jeu.</p>
+                        </div>
+                         </div>
+
+                          <div class="season-2 season-3 characters">
+                        <img src="../assets/images/personnages/JangGeum-ja.webp" alt="Jang Geum-ja">
+                        <h3>Jang Geum-ja / Player 149</h3>
+                        <p>Kang Ae-shim</p>
+                        <div class="character-overlay">
+                            <p>Présentée comme une femme honnête et opiniâtre au tempérament fougueux, Geum-ja se révèle plus tard gentille et empathique.</p>
+                        </div>
+                         </div>
+
+                          <div class="season-2 season-3 characters">
+                        <img src="../assets/images/personnages/Player222.webp" alt="Kim Jun-hee">
+                        <h3>Kim Jun-hee / Player 222</h3>
+                        <p>Jo Yu-ri</p>
+                        <div class="character-overlay">
+                            <p>Jun-hee est une fille douce et attentionnée. Elle fait de son mieux pour être indépendante mais a toujours besoin de dépendance puisqu'elle est très enceinte. </p>
+                        </div>
+                         </div>
+
+                         <div class="season-2 characters">
+                        <img src="../assets/images/personnages/Thanos_Player_Picture.webp" alt="Choi Su-bong(Thanos)">
+                        <h3>Choi Su-bong(Thanos)/ Player 230</h3>
+                        <p>Choi Seung-hyun</p>
+                        <div class="character-overlay">
+                            <p>Avant son entrée au 37e Squid Game, Choi Su-bong est devenu célèbre en tant que rappeur sous le nom de scène « Thanos ». </p>
+                        </div>
+                         </div>
+
+                         <div class="season-2 season-3 characters staff">
+                        <img src="../assets/images/personnages/Kang_No-eul_Season_3.webp" alt="Kang No-eul">
+                        <h3>Kang No-eul/ Guard number 011</h3>
+                        <p>Park Gyu-young</p>
+                        <div class="character-overlay">
+                            <p>Kang No-eul est une transfuge nord-coréenne qui apparaît dans la deuxième saison et la troisième saison de Squid Game, où elle devient soldat dans la compétition Squid Game en 2024.</p>
+                        </div>
+                         </div>
+
+                         <div class="season-1 season-2 season-3 characters staff">
+                        <img src="../assets/images/personnages/The_Recruiter.jpg" alt="The Recruiter">
+                        <h3>The Recruiter</h3>
+                        <p>Gong Yoo</p>
+                        <div class="character-overlay">
+                            <p>Le recruteur, également connu sous le nom de vendeur et recruteur sud-coréen, était un homme qui a travaillé comme recruteur pour les Squid Games depuis le 33e Squid Game en 2020 jusqu'à sa mort en 2024.</p>
+                        </div>
+                         </div>
+
+                         <div class="season-1 season-3 characters others">
+                        <img src="../assets/images/personnages/Mr._Choi_2025.webp" alt="Mr choi">
+                        <h3>Choi Woo-seok</h3>
+                        <p>Jeon Seok-ho</p>
+                        <div class="character-overlay">
+                            <p>s'associe à Seong Gi-hun et Hwang Jun-ho pour retrouver l'emplacement de l'île où se déroulent les jeux du squid game.</p>
+                        </div>
                     </div>
 
+                    <div class="season-2 season-3 characters staff">
+                        <img src="../assets/images/personnages/VIP_Richard_Masked.webp" alt="Vip Richard">
+                        <h3>VIP Richard</h3>
+                        <p>David Sayers</p>
+                        <div class="character-overlay">
+                            <p>the Lion Mask VIP</p>
+                        </div>
+                    </div>
+
+                    <div class="season-2 season-3 characters staff">
+                        <img src="../assets/images/personnages/VIP_Jennifer_29.webp" alt="VIP Jennifer">
+                        <h3>VIP Jennifer</h3>
+                        <p>Jane Wong</p>
+                        <div class="character-overlay">
+                            <p>the Panther Mask VIP</p>
+                        </div>
+                    </div>
+
+                    <div class="season-2 season-3 characters staff">
+                        <img src="../assets/images/personnages/VIP_John_Masked.webp" alt="VIP John">
+                        <h3>VIP John</h3>
+                        <p>Bryan Bucco</p>
+                        <div class="character-overlay">
+                            <p>the Eagle Mask VIP</p>
+                        </div>
+                    </div>
+
+                     <div class="season-2 season-3 characters staff">
+                        <img src="../assets/images/personnages/VIP_Jack_Masked.webp" alt="VIP Jack">
+                        <h3>VIP Jack</h3>
+                        <p>Jordan Lambertoni</p>
+                        <div class="character-overlay">
+                            <p>the Bear Mask VIP</p>
+                        </div>
+                    </div>
+
+                     <div class="season-2 season-3 characters staff">
+                        <img src="../assets/images/personnages/VIP_Kevin_soldier.webp" alt="VIP Kevin">
+                        <h3>VIP Kevin</h3>
+                        <p>Kevin Yorn</p>
+                        <div class="character-overlay">
+                            <p>the Buffalo VIP</p>
+                        </div>
+                    </div>
                 </section>
             </div>
 
@@ -199,7 +380,7 @@
 
         <div class="pagination"></div>
 
-        <div class="mini-title">
+        <div class="mini-title" id="episodes">
             <H2>Episodes</H2>
             <hr>
         </div>
@@ -212,8 +393,8 @@
                 </select>
 
 
-                <div class="episode"></div>
-                <div class="episode-list">
+                <div class="episode" ></div>
+                <div class="episode-list" >
                     <div class="episode saison-1">
                         <img src="../assets/images/episodes/s1-ep1" alt="saison 1 episode 1">
                         <h3>Episode 1: Un, deux, trois, soleil</h3>
@@ -354,7 +535,7 @@
 
                 </div>
             </section>
-            <div class="mini-title">
+            <div class="mini-title" id="games">
                 <H2>Games Season 1</H2>
                 <hr>
             </div>
@@ -465,7 +646,7 @@
     <script src="../js/pages/squid/characters.js"></script>
     <script src="../js/pages/squid/episodes.js"></script>
     <script src="../js/pages/squid/games.js"></script>
-
+    <script src="../js/pages/squid/navbar.js"></script>
 
 
 </body>
