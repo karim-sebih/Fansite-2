@@ -18,17 +18,14 @@ body {
   overflow-x: hidden;
 }
 
-main p {
-  margin-top: 0.35em;
-}
-
 nav {
   position: fixed;
   height: 6vh;
   width: 100vw;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 1);
   border-bottom: 1px solid #272832;
   z-index: 11;
+  will-change: transform;
 }
 
 nav ul {
@@ -195,7 +192,6 @@ p {
 .gallery li {
   list-style: none;
   flex: 0 0 auto;
-  width: auto;
   border-radius: 1px;
   overflow: hidden;
 }
@@ -312,6 +308,10 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 30px;
   padding: 30px;
+}
+
+#media_h2 {
+  padding: 5px;
 }
 
 .mediaH2 {
@@ -484,12 +484,11 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
- 
   nav {
     position: fixed;
     top: 0;
     right: 0;
-    height: 6vh;
+    height: 8vh;
     width: 100vw;
     background-color: black;
     z-index: 11;
@@ -501,14 +500,14 @@ footer {
   nav ul {
     display: flex;
     flex-direction: row;
-    gap: 4px; /* Réduit l’espace entre les li */
+    gap: 4px;
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
   nav li {
-    flex-shrink: 1; /* Permet de rétrécir au besoin */
+    flex-shrink: 1;
   }
 
   nav a {
@@ -617,10 +616,8 @@ footer {
     margin-bottom: 5px;
     line-height: 1.5;
     font-size: 0.9rem;
-    /* Casse les mots trop longs */
     word-break: break-word;
     overflow-wrap: break-word;
-    /* Limite à 4 lignes */
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -702,75 +699,133 @@ footer {
   }
 }
 
-@media screen and (min-width: 1580px){
-  
-  #heading h1{
+@media screen and (min-width: 1573px) {
+  #heading h1 {
+    margin-top: 70px;
+    font-size: 100px;
+  }
+
+  #heading h2 {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1580px) {
+  #heading h1 {
     margin-top: 70px;
     font-size: 100px;
   }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1579px){
-  
-  #heading h1{
+@media screen and (min-width: 1200px) and (max-width: 1579px) {
+  #heading h1 {
     margin-top: 70px;
     font-size: 100px;
   }
-}
 
-@media screen and (min-width: 814px) and (max-width: 1200px){
-  
-  #heading h1{
-    margin-top: 80px;
-    font-size: 100px;
+  #heading h2 {
+    margin-top: 30px;
   }
 }
 
-@media screen and (min-width: 500px) and (max-width: 813px){
-  
-  #heading h1{
+@media screen and (min-width: 757px) and (max-width: 1199px) {
+  #heading h1 {
+    margin-top: 70px;
+    font-size: 100px;
+  }
+
+  #heading h2 {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 678px) and (max-width: 756px) {
+  #heading h1 {
+    margin-top: 70px;
+    font-size: 100px;
+  }
+
+  #heading h2 {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 677px) {
+  #heading h1 {
     margin-top: 100px;
     font-size: 80px;
   }
 
-  #heading h2{
-    margin-top: 25px;
+  #heading h2 {
+    margin-top: 85px;
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 499px){
-  
-  #heading h1{
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  #heading h1 {
     margin-top: 180px;
   }
-}
 
-@media screen and (min-width: 430px) and (max-width: 479px){
-  
-  #heading h1{
-    margin-top: 145px;
+  #heading h2 {
+    margin-top: 80px;
   }
 }
 
-@media screen and (min-width: 400px) and (max-width: 429px){
-  .character-container,
-  .media-container {
+@media screen and (min-width: 430px) and (max-width: 479px) {
+  #heading h1 {
+    margin-top: 180px;
+  }
+
+  #heading h2 {
+    margin-top: 185px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 429px) {
+  .character-container {
     grid-template-columns: 1fr;
   }
 
-  #heading h1{
+  .media-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #heading h1 {
     margin-top: 120px;
   }
+
+  #games {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
-@media screen and (max-width: 399px){
-  .character-container,
+@media screen and (max-width: 399px) {
+  .character-containern {
+    grid-template-columns: 1fr;
+  }
+  
   .media-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #games {
+    grid-column: 1 / -1;
+    display: grid;
     grid-template-columns: 1fr;
   }
 
-  #heading h1{
-    margin-top: 110px;
+  #heading h1 {
+    margin-top: 80px;
+  }
+
+  #heading h2 {
+    margin-top: 65px;
+  }
+
+  nav {
+    height: 8vh;
   }
 
   nav a {
@@ -778,3 +833,44 @@ footer {
   }
 }
 
+@media (max-width: 698px) {
+  .trailer {
+    height: auto;
+    margin-top: 8vh;
+  }
+
+  .trailer_vid {
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 50vh;
+  }
+
+  .trailer_vid iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (orientation: landscape) {
+  nav {
+    height: 48px;
+  }
+
+  nav a {
+    font-size: 8px;
+  }
+
+  .trailer {
+    margin-top: 48px;
+  }
+
+  #caroussel_section {
+    display: none;
+  }
+
+  .caroussel-container {
+    height: 0;
+    overflow: hidden;
+  }
+}
