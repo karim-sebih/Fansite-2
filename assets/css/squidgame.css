@@ -1,0 +1,854 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: "Game of Squids";
+  src: url("../fonts/game_of_squids/Game\ Of\ Squids.ttf") format('truetype');
+}
+
+
+h1 {
+  font-family: "Game of Squids", sans-serif;
+  font-size: 3.0em;
+  color: #E6E6E4;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000;
+}
+
+body {
+  background-color: #037a76;
+  color: #E7E7E5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    display: block;
+    margin: 0px;
+    min-width:320px;
+    height: 42px;
+    max-height: 44px;
+    font-size: 17px;
+    user-select: none;
+    color: #ed1b76;
+    opacity: 0.9;
+    background-color: #000000;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+
+  .burger-menu{
+  display: none;
+  height:0; 
+  position: absolute;
+  right: 2rem;
+  top:60px;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.906);
+  border-radius: 10px;
+  overflow:hidden ;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  } 
+  
+  .logo{
+     margin-right: auto;
+  }
+  
+  .burger-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+  
+  .divider {
+  height: 1px;
+  background-color: #fff;
+  width: 80%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  }
+  
+  .buttons-burger-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  
+  }
+  
+  .burger-menu-button{
+    padding: 20px;
+    display: none;
+  }
+
+  
+  /* -------Responsive navbar-------*/
+  
+  @media (max-width: 750px) {
+  
+  
+  .navbar .links,
+  .navbar .buttons
+  {
+  display: none;
+  }
+  
+  .navbar .burger-menu-button{
+  display: block;
+  }
+
+  .burger-menu-button:hover{
+    
+    color: #000;
+  }
+  
+  .burger-menu-button{
+    color: #333;
+  }
+
+  .burger-menu{
+    display: block;
+    
+    }
+  
+    .nav-links a{
+        color:#ed1b76;
+    }
+    .nav-links .open-links{
+        display: flex;
+    flex-direction: column;
+    }
+  .burger-menu.open{
+    height: 210px;
+  }
+  
+  }
+  
+  
+  @media (max-width: 599px) {
+  
+  
+  
+   .burger-menu{    left:  2rem;
+      width: unset;
+      
+  }
+  
+  }
+
+.side-links{
+    margin-top: 3px;
+    margin-left: 5px;
+    gap: 20px;
+    color: #333;
+}
+
+.material-symbols-outlined:hover{
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: 10%;
+    
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+
+    z-index: 2;
+}
+
+.nav-links .links a{
+    color:#ed1b76;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    
+    color: #037A76;
+}
+
+.logo img{
+    width: 15px;
+    height: auto;
+   
+}
+
+@media screen and (max-width: 600px) {
+    .nav-links{
+        margin-left: 0%;
+        justify-content: flex-end;
+        
+    }
+
+    .logo {
+        margin-right: auto;
+        margin-left: 15px;
+    }
+    
+    .side-links{
+        gap: 15px;
+    }
+
+}
+
+
+
+
+
+
+
+.intro {
+  padding: 35px;
+ 
+  margin: 20px auto;
+ 
+}
+
+@media screen and (max-width: 768px) {
+ video{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+  } 
+ 
+  
+}
+.hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #E7E7E5;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.hero {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url("../images/AAAABYVxx70Tsy2LY_X9PIODgATpFf9ml4HptRoFGbaxQMiVCDz5SRWKl7HgkrIvJ79ONFoIYGOlDEIGnauiRbTq5co86K7Cm6_yqivZ.webp");  background-size: cover;
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero{
+    background-position: center;
+    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 20px 5px;
+  }
+    
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  text-align: left;
+  
+}
+
+.details-content {
+  max-width: 600px;
+  margin-left: 20px;
+  
+}
+
+
+.details-content ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  list-style-type: none;
+  padding: 0;
+  
+
+}
+
+.details img {
+  width:100%;
+  height: 360px;
+  border-radius: 10px;
+  
+  
+}
+
+@media screen and (max-width: 768px) {
+  .details {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .details img {
+    max-width: 100%;
+    padding: 15px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+    
+}
+
+.details hr {
+  border: none;
+  height: 1px;
+  background-color: #E7E7E5;
+  margin: 0 1px;
+}
+
+.details h2 {
+  font-family: "Game of Squids", sans-serif;
+  padding-left: 1px;
+}
+
+.characters-list {
+  display: flex;
+  flex-direction: row; 
+ 
+  margin-top: 30px;
+  width: 95%;
+  
+}
+
+.characters{
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(30px); 
+  background:  #029a94; 
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.765);
+  width: 250px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .characters-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .characters {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+}
+
+
+
+
+.staff{
+   padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(30px); 
+  background: #037A76;
+background: linear-gradient(180deg, rgba(0, 0, 0, 1) 58%, rgba(252, 0, 0, 1) 100%);
+  color: #ffffff;
+}
+
+.others{
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(30px); 
+  background: #ffffff;
+  color: black;
+}
+
+
+.character-grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+ 
+
+  .character-grid {
+    width: 100%;
+  }
+}
+
+.details h2 {
+  font-family: "Game of Squids", sans-serif;
+  padding-left: 1px;
+}
+
+
+.mini-title {
+  font-family: "Game of Squids", sans-serif;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+
+.characters-list H2 {
+  
+  font-size: 2.5rem;
+
+}
+.characters-list img{
+  width: 120px;
+  height: 110px;
+  border-radius: 10px;
+  margin-bottom: 15Px;
+}
+
+.search-box {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  
+}
+
+.filter-box{
+    font-family: "Game of Squids", sans-serif;
+
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+.sidefilter {
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+form input{
+  width: 20rem;
+  padding: 7px;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  background-color:transparent;
+  color: #ADADAD;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+
+.btn {
+  text-decoration: none;
+  padding: 5Px;
+  border-radius: 5px;
+  
+  margin-right: 3px;
+  color: #E7E7E5;
+  background-color: #ed1b76;
+}
+
+.btn:hover {
+  background-color: #E7E7E5;
+  color: #ed1b76;
+}
+
+.active{
+  color: #ed1b76;
+  background-color: #E7E7E5;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
+}
+
+#store-products {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+ 
+}
+
+#store-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 20px ;
+}
+
+@media screen and (max-width: 1024px) {
+  #store-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #store-products {
+    margin: auto;
+    width: 70%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.page-btn {
+  padding: 8px 12px;
+  border: none;
+   color: #E7E7E5;
+  background-color: #ed1b76;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.page-btn.active {
+  color: #ed1b76;
+  background-color: #E7E7E5
+}
+
+select{
+  
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ed1b76;
+  color: #E7E7E5;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left:100PX;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  select {
+    
+    margin-left: 100px;
+  }
+  
+}
+
+option {
+  color: #ed1b76;
+  background-color: #E7E7E5;
+  border-radius: 10px;
+}
+
+.episode-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  margin: 20px 100px;
+}
+
+.episode img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.episode-list h3, p {
+  margin: 10px 0;
+}
+
+.episode {
+  
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px); 
+  background: rgba(0, 0, 0, 0.4); 
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 1024px) {
+  .episode-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px ;
+  }
+
+  .episode {
+    padding: 0.5rem;
+  }
+  
+}
+
+.game-info{
+    font-family: "Game of Squids", sans-serif;
+    margin: 40px;
+    text-align: center;
+
+}
+.game-carousel {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  margin-left: 25%;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .game-carousel {
+    width: 90%;
+    height: 250px;
+    margin-left: 5%;
+  }
+  
+}
+
+.game-carousel .game-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.game-carousel .game-slide-container {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+
+.game-carousel .game-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.game-carousel .game-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 1em;
+}
+
+.game-carousel .game-slide-container:hover .game-description {
+  opacity: 1;
+}
+
+.game-carousel .game-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+}
+
+.game-carousel .game-prev {
+  left: 10px;
+}
+
+.game-carousel .game-next {
+  right: 10px;
+}
+
+.game-carousel .game-pagination {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.game-carousel .game-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.game-carousel .game-dot.active {
+  background: #ffffff;
+}
+
+footer {
+    /* background-color: var(--primary-color); */
+    color: white;
+    padding: 40px 0 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(15, 23, 42, 0.8);
+
+
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 40px;
+    gap: 30px;
+
+}
+
+.footer-logo {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.footer-about p {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+
+
+
+.footer-links {
+    flex: 1;
+    margin-top: 2%;
+}
+
+.footer-links h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--hover-color);
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--hover-color);
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: var(--hover-color);
+
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--hover-color);
+}
+
+.copyright p {
+    margin-bottom: 10px;
+}
+
