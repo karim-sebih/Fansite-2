@@ -22,9 +22,10 @@ nav {
   position: fixed;
   height: 6vh;
   width: 100vw;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 1);
   border-bottom: 1px solid #272832;
   z-index: 11;
+  will-change: transform;
 }
 
 nav ul {
@@ -191,7 +192,6 @@ p {
 .gallery li {
   list-style: none;
   flex: 0 0 auto;
-  width: auto;
   border-radius: 1px;
   overflow: hidden;
 }
@@ -308,6 +308,10 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 30px;
   padding: 30px;
+}
+
+#media_h2 {
+  padding: 5px;
 }
 
 .mediaH2 {
@@ -480,12 +484,11 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
- 
   nav {
     position: fixed;
     top: 0;
     right: 0;
-    height: 6vh;
+    height: 8vh;
     width: 100vw;
     background-color: black;
     z-index: 11;
@@ -497,7 +500,7 @@ footer {
   nav ul {
     display: flex;
     flex-direction: row;
-    gap: 4px; /* Réduit l’espace entre les li */
+    gap: 4px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -613,10 +616,8 @@ footer {
     margin-bottom: 5px;
     line-height: 1.5;
     font-size: 0.9rem;
-    /* Casse les mots trop longs */
     word-break: break-word;
     overflow-wrap: break-word;
-    /* Limite à 4 lignes */
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -698,6 +699,16 @@ footer {
   }
 }
 
+@media screen and (min-width: 1573px) {
+  #heading h1 {
+    margin-top: 70px;
+    font-size: 100px;
+  }
+
+  #heading h2 {
+    margin-top: 30px;
+  }
+}
 
 @media screen and (min-width: 1580px) {
   #heading h1 {
@@ -739,7 +750,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 604px) and (max-width: 677px) {
+@media screen and (min-width: 600px) and (max-width: 677px) {
   #heading h1 {
     margin-top: 100px;
     font-size: 80px;
@@ -750,24 +761,13 @@ footer {
   }
 }
 
-@media screen and (min-width: 606px) and (max-width: 603px) {
-  #heading h1 {
-    margin-top: 130px;
-    font-size: 80px;
-  }
-
-  #heading h2 {
-    margin-top: 115;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 605px) {
+@media screen and (min-width: 480px) and (max-width: 599px) {
   #heading h1 {
     margin-top: 180px;
   }
 
   #heading h2 {
-    margin-top: 100px;
+    margin-top: 80px;
   }
 }
 
@@ -782,28 +782,50 @@ footer {
 }
 
 @media screen and (min-width: 400px) and (max-width: 429px) {
-  .character-container,
-  .media-container {
+  .character-container {
     grid-template-columns: 1fr;
+  }
+
+  .media-container {
+    grid-template-columns: 1fr 1fr;
   }
 
   #heading h1 {
     margin-top: 120px;
   }
+
+  #games {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 399px) {
-  .character-container,
+  .character-containern {
+    grid-template-columns: 1fr;
+  }
+  
   .media-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #games {
+    grid-column: 1 / -1;
+    display: grid;
     grid-template-columns: 1fr;
   }
 
   #heading h1 {
-    margin-top: 110px;
+    margin-top: 80px;
   }
 
   #heading h2 {
-    margin-top: 190px;
+    margin-top: 65px;
+  }
+
+  nav {
+    height: 8vh;
   }
 
   nav a {
@@ -811,9 +833,10 @@ footer {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 698px) {
   .trailer {
     height: auto;
+    margin-top: 8vh;
   }
 
   .trailer_vid {
@@ -826,5 +849,28 @@ footer {
   .trailer_vid iframe {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media (orientation: landscape) {
+  nav {
+    height: 48px;
+  }
+
+  nav a {
+    font-size: 8px;
+  }
+
+  .trailer {
+    margin-top: 48px;
+  }
+
+  #caroussel_section {
+    display: none;
+  }
+
+  .caroussel-container {
+    height: 0;
+    overflow: hidden;
   }
 }
