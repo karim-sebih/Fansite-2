@@ -24,7 +24,6 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
-    /* Glass morphism effect */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -32,7 +31,6 @@
     overflow: hidden;
 }
 
-/* Shimmer animation for extra effect */
 .transition-overlay::after {
     content: '';
     position: absolute;
@@ -63,11 +61,9 @@
 
 .transition-overlay.active {
     opacity: 0.9;
-    /* Slightly less than 1 for better glass effect */
     pointer-events: all;
 }
 
-/* Keep the smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -77,7 +73,6 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
-    /* background: url("../images/refinement.gif") no-repeat center center fixed; */
 }
 
 body::before {
@@ -103,7 +98,6 @@ section {
     padding: 80px 0;
 }
 
-
 section h1 {
     text-align: center;
     margin: 0 auto 40px;
@@ -111,8 +105,6 @@ section h1 {
     color: var(--text-color);
     text-transform: uppercase;
     letter-spacing: 2px;
-
-    /* Liquid Glass Effect */
     display: inline-block;
     padding: 10px 54px;
     border-radius: 50px;
@@ -147,17 +139,6 @@ section h1::after {
     z-index: -1;
 }
 
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%) rotate(30deg);
-    }
-
-    100% {
-        transform: translateX(100%) rotate(30deg);
-    }
-}
-
-
 /* Header Styles */
 header {
     color: white;
@@ -184,16 +165,15 @@ header {
     height: auto;
 }
 
-
-
 nav ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 nav ul li a {
@@ -209,15 +189,11 @@ nav ul li a {
     font-weight: 500;
     color: var(--text-color);
     background: rgba(255, 255, 255, 0.1);
-    /* Semi-transparent background */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    /* Light border */
     border-radius: 45px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    /* This creates the glass effect */
     -webkit-backdrop-filter: blur(5px);
-    /* For Safari */
     transition: all 0.3s ease;
     background: linear-gradient(to right,
             rgba(0, 195, 208, 0.1),
@@ -225,7 +201,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-
     background: rgba(255, 255, 255, 0.2);
     color: var(--text-color);
     box-shadow: 0 8px 32px rgba(0, 195, 208, 0.3);
@@ -309,7 +284,9 @@ nav ul li a:hover {
 
 .dropdown {
     position: relative;
-    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .dropdown-content {
@@ -320,7 +297,10 @@ nav ul li a:hover {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    margin-left: 20px;
+    margin-left: 0;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .dropdown-content a {
@@ -359,7 +339,6 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* width: 80%; */
 }
 
 .season-card:hover {
@@ -475,7 +454,6 @@ nav ul li a:hover {
     text-align: justify;
     max-width: 900px;
     margin: 0 auto;
-
     background: rgba(0, 44, 85, 0.3);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -489,10 +467,6 @@ nav ul li a:hover {
     box-shadow: var(--shadow);
     line-height: 1.8;
 }
-
-/* .about-card p {
-    margin-bottom: 20px;
-} */
 
 /* Cast Styles */
 .cast-display {
@@ -532,6 +506,7 @@ nav ul li a:hover {
     align-items: center;
     min-width: 130px;
     scroll-snap-align: start;
+    flex-shrink: 0;
 }
 
 .character img {
@@ -581,14 +556,16 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transition: color 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .carousel-button.prev {
-    left: -50px;
+    left: 10px;
 }
 
 .carousel-button.next {
-    right: -50px;
+    right: 10px;
 }
 
 .carousel-button:hover {
@@ -596,6 +573,16 @@ nav ul li a:hover {
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    .season-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .tv-stand {
+        width: 85%;
+    }
+}
+
 @media (max-width: 768px) {
     section {
         padding: 60px 0;
@@ -604,6 +591,7 @@ nav ul li a:hover {
     section h1 {
         font-size: 1.75rem;
         margin-bottom: 30px;
+        padding: 10px 30px;
     }
 
     .header-container {
@@ -624,8 +612,6 @@ nav ul li a:hover {
         margin: 0 10px;
     }
 
-
-
     .banner {
         height: 400px;
     }
@@ -639,12 +625,25 @@ nav ul li a:hover {
         width: 90%;
     }
 
-    .carousel-button.prev {
-        left: -30px;
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 2rem;
     }
 
-    .carousel-button.next {
-        right: -30px;
+    .character {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .season-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .dropdown-content {
+        left: 0;
+        transform: none;
     }
 }
 
@@ -655,29 +654,25 @@ nav ul li a:hover {
 
     section h1 {
         font-size: 1.5rem;
+        padding: 8px 20px;
     }
 
     nav ul {
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
     }
 
     nav ul li a {
-        font-size: 0.8rem;
-        padding: 5px 7px;
+        font-size: 0.7rem;
+        padding: 8px 12px;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 5px;
     }
 
     .banner {
-        height: 250px;
-    }
-
-    .season-container {
-        grid-template-columns: 1fr;
+        height: 300px;
     }
 
     .tv-stand {
@@ -687,15 +682,23 @@ nav ul li a:hover {
     .carousel-button {
         width: 30px;
         height: 30px;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .character {
-        min-width: 110px;
+        min-width: 100px;
     }
 
     .character img {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .episode-info h3 {
+        font-size: 1rem;
+    }
+    
+    .episode-info p {
+        font-size: 0.8rem;
     }
 }
