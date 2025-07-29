@@ -20,17 +20,19 @@ body {
   border-radius: 20px;
 }
 
+
 .shrekVideo {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center;
   z-index: -1;
-  
+
   border-radius: 20px;
 }
 
-.shrekVideoGray{
+.shrekVideoGray {
   filter: blur(0px) grayscale(100%);
 }
 
@@ -88,7 +90,7 @@ section {
   position: relative;
   bottom: 150px;
   font-size: 80px;
- white-space: nowrap;
+  white-space: nowrap;
   text-align: end;
   color: white;
 }
@@ -98,7 +100,7 @@ section {
 .starSection {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   height: 0px;
 }
 
@@ -115,6 +117,27 @@ section {
   border-bottom-left-radius: 20px;
   border-radius: 20px;
 }
+
+.home {
+  position: relative;
+  top: -30px;
+
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(40, 40, 40);
+  color: rgb(170, 170, 170);
+  
+  
+  border-radius: 20px;
+}
+
 
 .stars {
   font-size: 30px;
@@ -319,11 +342,10 @@ section {
   border: 3px solid white;
   border-radius: 10px;
   filter: drop-shadow(0px 0px 5px black);
- transition: 0.5s;
-  
+  transition: 0.5s;
 }
 
-.rekImgDiv{
+.rekImgDiv {
   position: relative;
   background-color: rgba(0, 255, 255, 0);
   transition: 0.5s;
@@ -348,38 +370,33 @@ section {
   width: 330px;
 }
 
-
-
 /* KADRER */
-.kadrSection{
+.kadrSection {
   padding: 60px;
   background-color: rgb(39, 39, 39);
   border-top: 1px solid rgb(53, 53, 53);
 }
 
-.kadrGrid{
+.kadrGrid {
   margin-top: 20px;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
-  
-  
 }
 
-.kadr{
+.kadr {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
-border-radius: 15px;
+  border-radius: 15px;
   transition: 0.5s;
 }
 
-.kadr:hover{
+.kadr:hover {
   width: 100%;
-  
 }
 
-.left{
+.left {
   width: 40px;
   background-color: rgb(49, 49, 49);
   border: 1px solid black;
@@ -391,7 +408,7 @@ border-radius: 15px;
   border-radius: 10px;
 }
 
-.right{
+.right {
   width: 40px;
   background-color: rgb(49, 49, 49);
   border: none;
@@ -402,40 +419,21 @@ border-radius: 15px;
   border-radius: 10px;
 }
 
-.buttons{
+.buttons {
   display: flex;
   margin-top: 20px;
   justify-content: space-between;
 }
 
-.kadrTitle{
+.kadrTitle {
   width: 100%;
   text-align: center;
   color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* MEDIA */
 
 @media screen and (min-width: 0px) and (max-width: 960px) {
-
   .rekAboutSection {
     display: grid;
     gap: 20px;
@@ -518,7 +516,6 @@ border-radius: 15px;
   /* CART */
 
   .distribution {
-    
     margin: 0 auto;
     width: min-content;
     border-radius: 20px;
@@ -592,11 +589,9 @@ border-radius: 15px;
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
-    
   }
 
   .rek {
-   
     width: 100%;
   }
 
@@ -609,7 +604,7 @@ border-radius: 15px;
     border: 3px solid white;
     border-radius: 10px;
     filter: drop-shadow(0px 0px 5px black);
-    
+
     transition: 0.5s;
   }
 
@@ -617,9 +612,6 @@ border-radius: 15px;
     display: flex;
     width: 675px;
     margin: 0 auto;
-    
-    
-  
   }
 }
 
@@ -640,7 +632,6 @@ border-radius: 15px;
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
-    
   }
 
   .rek {
@@ -684,17 +675,14 @@ border-radius: 15px;
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
-    
   }
 
-  .kadrGrid{
-  margin-top: 20px;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr;
-  
-  
-}
+  .kadrGrid {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
 
   .rek {
     margin: 0 auto;
@@ -738,7 +726,6 @@ border-radius: 15px;
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
-    
   }
 
   .rek {
@@ -766,11 +753,8 @@ border-radius: 15px;
   }
 }
 
-
-
 @media screen and (min-width: 0px) and (max-width: 650px) {
-
-    .cartKaruselDiv {
+  .cartKaruselDiv {
     width: 380px;
     margin: 0 auto;
     display: flex;
@@ -780,22 +764,13 @@ border-radius: 15px;
     overflow-x: auto;
   }
 
-
-
-
   .rekAboutSection {
     display: grid;
 
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
-
-
-
   }
-
-
-
 
   .rek {
     margin: 0 auto;
@@ -825,28 +800,25 @@ border-radius: 15px;
   }
 }
 
-
-
-
 @media screen and (min-width: 0px) and (max-width: 550px) {
-  .shrekVideoDiv{
+  .shrekVideoDiv {
     height: 300px;
   }
 
-  .blackFilter{
+  .blackFilter {
     height: 300px;
   }
 
-  .starsDiv{
+  .starsDiv {
     width: 200px;
     height: 40px;
     bottom: 20px;
   }
-  .stars{
+  .stars {
     font-size: 25px;
   }
 
-  .rebirth{
+  .rebirth {
     left: 30px;
     font-size: 45px;
     bottom: 90px;
@@ -863,15 +835,15 @@ border-radius: 15px;
     overflow-x: auto;
   }
 
-  .imgAvis, .distribution{
-    
+  .imgAvis,
+  .distribution {
     border-radius: 0px;
   }
-  .imgAvis{
+  .imgAvis {
     border-bottom: 0px;
     border-left: 0px;
     border-top: 0px;
-    border-right: 0px ;
+    border-right: 0px;
   }
 
   .rekAboutSection {
@@ -881,19 +853,16 @@ border-radius: 15px;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
     padding: 0px 0px;
-    
-
-
   }
 
-  .distribution{
+  .distribution {
     border-bottom: 1px solid rgb(55, 55, 55);
     border-left: 0px;
     border-top: 0px;
-    border-right: 0px ;
+    border-right: 0px;
   }
 
-  .about{
+  .about {
     border-top: 1px solid rgb(55, 55, 55);
     border-left: 0px solid rgb(55, 55, 55);
     border-right: 0px solid rgb(55, 55, 55);
@@ -901,11 +870,11 @@ border-radius: 15px;
     border-radius: 0px;
   }
 
-  .filmSection{
+  .filmSection {
     padding: 50px 0px 0px 0px;
   }
 
-  .filmGrid{
+  .filmGrid {
     padding: 0px;
     gap: 0px;
   }
@@ -941,10 +910,10 @@ border-radius: 15px;
     width: 400px;
   }
 
-  .kadrGrid{
+  .kadrGrid {
     display: grid;
-  gap: 30px;
-  grid-template-columns: 1fr;
+    gap: 30px;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -965,9 +934,6 @@ border-radius: 15px;
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
-    
-
-    
   }
 
   .rek {
@@ -988,7 +954,7 @@ border-radius: 15px;
     transition: 0.5s;
   }
 
-    .trailerSection{
+  .trailerSection {
     padding: 20px;
   }
 
@@ -996,12 +962,9 @@ border-radius: 15px;
     margin: 0 auto;
     display: flex;
     width: 330px;
-
   }
-  .kadrSection{
+  .kadrSection {
     padding: 30px;
-
-
   }
 }
 
@@ -1016,20 +979,17 @@ border-radius: 15px;
     overflow-x: auto;
   }
 
-  .trailerSection{
+  .trailerSection {
     padding: 20px;
   }
 
   .rekAboutSection {
-    
     display: grid;
     gap: 0px;
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
     padding: 30px 0px;
-
-    
   }
 
   .rek {
@@ -1057,8 +1017,6 @@ border-radius: 15px;
   }
 }
 
-
-
 @media screen and (min-width: 0px) and (max-width: 380px) {
   .cartKaruselDiv {
     width: 250px;
@@ -1070,20 +1028,17 @@ border-radius: 15px;
     overflow-x: auto;
   }
 
-  .trailerSection{
+  .trailerSection {
     padding: 20px;
   }
 
   .rekAboutSection {
-    
     display: grid;
     gap: 0px;
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
     padding: 30px 0px;
-
-    
   }
 
   .rek {
@@ -1111,8 +1066,6 @@ border-radius: 15px;
   }
 }
 
-
-
 @media screen and (min-width: 0px) and (max-width: 340px) {
   .cartKaruselDiv {
     width: 250px;
@@ -1124,20 +1077,17 @@ border-radius: 15px;
     overflow-x: auto;
   }
 
-  .trailerSection{
+  .trailerSection {
     padding: 20px;
   }
 
   .rekAboutSection {
-    
     display: grid;
     gap: 0px;
     justify-content: center;
     grid-template-columns: 1fr;
     background-color: rgba(40, 40, 40, 1);
     padding: 30px 0px;
-
-    
   }
 
   .rek {
