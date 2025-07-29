@@ -128,7 +128,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../appleseed_assets/background_img.jpeg");
+  background-image: url("./assets/background_img.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -270,7 +270,7 @@ p {
   content: "";
   position: absolute;
   inset: 0; /* top, right, bottom, left à 0 */
-  background-image: url("../appleseed_assets/caroussel1.jpeg");
+  background-image: url("./assets/caroussel1.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -293,7 +293,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(../appleseed_assets/mecha_hd_png-Picsart-BackgroundRemover.jpg);
+  background-image: url(./assets/mecha_hd_png-Picsart-BackgroundRemover.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -802,10 +802,10 @@ footer {
 }
 
 @media screen and (max-width: 399px) {
-  .character-containern {
+  .character-container {
     grid-template-columns: 1fr;
   }
-  
+
   .media-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -852,8 +852,15 @@ footer {
   }
 }
 
-@media (orientation: landscape) {
-  nav {
+@media (min-width: 700px) {
+  .gallery {
+    animation-duration: 60s;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+
+   nav {
     height: 48px;
   }
 
@@ -864,7 +871,6 @@ footer {
   .trailer {
     margin-top: 48px;
   }
-
   #caroussel_section {
     display: none;
   }
@@ -874,3 +880,4 @@ footer {
     overflow: hidden;
   }
 }
+
