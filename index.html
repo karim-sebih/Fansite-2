@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Fantastic Four</title>
 </head>
 
 <body>
-
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="./images/fantastic4.PNG" alt="">
+                <img src="./images/fantastic4.PNG" alt="Fantastic Four Logo">
             </div>
 
             <button class="burger-menu" aria-label="Toggle menu">
@@ -40,11 +38,9 @@
         </div>
     </header>
 
-    <section class="tvshows-content">
-        <!-- <div id="series-content-container" style="display: none;"> -->
+    <section class="tvshows-content" id="home">
         <section class="series-display" id="tvShows">
             <div class="series-container">
-
                 <!-- Appleseed Card -->
                 <div class="card-show">
                     <div class="image-serie">
@@ -77,8 +73,6 @@
                         </div>
                     </div>
                 </div>
-
-
 
                 <!-- Squid Game -->
                 <div class="card-show">
@@ -181,24 +175,21 @@
                 </div>
             </div>
         </section>
-        </div>
     </section>
-
 
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <img src="./images/fantastic4.PNG" alt="">
+                        <img src="./images/fantastic4.PNG" alt="Fantastic Four Logo">
                     </div>
-                    <p>"This Week’s Top 4? We’ve Got Them. You Stream Them."</p>
+                    <p>"This Week's Top 4? We've Got Them. You Stream Them."</p>
                     <div class="social-icons">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube-square"></i></a>
-                        <!-- <a href="#" aria-label="TikTok"><i class="fa fa-tiktok"></i></a> -->
                     </div>
                 </div>
                 <div class="footer-links">
@@ -219,45 +210,9 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Simple JavaScript for demonstration
-        document.querySelectorAll('.card button').forEach(button => {
-            button.addEventListener('click', function () {
-                const title = this.closest('.card').querySelector('h3').textContent;
-                alert(`You clicked to watch "${title}". This is just a demo!`);
-            });
-        });
-    </script>
-    <!-- 
-    <script src="navigation.js"></script> -->
+
+    <script src="index.js"></script>
     <script src="page-transitions.js"></script>
-
-    <script>
-        // Burger menu functionality
-        const burgerMenu = document.querySelector('.burger-menu');
-        const navMenu = document.querySelector('.nav-menu');
-
-        burgerMenu.addEventListener('click', () => {
-            burgerMenu.classList.toggle('active');
-            navMenu.classList.toggle('active');
-
-            // Toggle body scroll when menu is open
-            if (navMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                burgerMenu.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -1,100 +1,80 @@
-// spa-navigation.js - Simple view switching for SPA
-
 document.addEventListener('DOMContentLoaded', function() {
-  // Cache DOM elements
-  const mainContent = document.querySelector('.tvshows-content');
-  const header = document.querySelector('header');
-  const footer = document.querySelector('footer');
-  
-  // Create a container for series content
-  const seriesContainer = document.createElement('div');
-  seriesContainer.id = 'series-container';
-  seriesContainer.style.display = 'none';
-  mainContent.parentNode.insertBefore(seriesContainer, mainContent.nextSibling);
-
-  // Store the original main content
-  const originalMainContent = mainContent.innerHTML;
-
-  // Handle Watch Now button click (Severance)
-  document.querySelector('.watch-btn a[href="./pages/series.html"]')?.addEventListener('click', function(e) {
-    e.preventDefault();
-    showSeriesPage();
-  });
-
-  // Handle Home navigation
-  document.querySelectorAll('nav a[href="../index.html"], nav a[href="#home"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      if (window.location.pathname.endsWith('index.html')) {
-        e.preventDefault();
-        showMainPage();
-      }
-    });
-  });
-
-  // Function to show series page
-  function showSeriesPage() {
-    // Hide main content
-    mainContent.style.display = 'none';
+    // Burger menu functionality
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navMenu = document.querySelector('.nav-menu');
     
-    // Load series content if not already loaded
-    if (!seriesContainer.hasChildNodes()) {
-      fetch('./pages/series.html')
-        .then(response => response.text())
-        .then(html => {
-          // Extract the content between header and footer
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const seriesContent = doc.querySelector('body').innerHTML;
-          
-          // Insert into our container
-          seriesContainer.innerHTML = seriesContent;
-          
-          // Load series.css
-          loadSeriesCSS();
-          
-          // Show the container
-          seriesContainer.style.display = 'block';
-          
-          // Initialize series page functionality
-          initSeriesPage();
-        })
-        .catch(error => {
-          console.error('Error loading series page:', error);
-          seriesContainer.innerHTML = '<div style="padding: 20px; color: white;">Failed to load content</div>';
-          seriesContainer.style.display = 'block';
-        });
-    } else {
-      // Content already loaded, just show it
-      seriesContainer.style.display = 'block';
+    // Toggle menu function
+    function toggleMenu() {
+        burgerMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Toggle body scroll when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     }
-  }
-
-  // Function to show main page
-  function showMainPage() {
-    // Show main content
-    mainContent.style.display = 'block';
     
-    // Hide series content
-    seriesContainer.style.display = 'none';
+    // Event listeners
+    burgerMenu.addEventListener('click', toggleMenu);
     
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // Function to load series.css
-  function loadSeriesCSS() {
-    // Check if already loaded
-    if (document.querySelector('link[href="./pages/series.css"]')) return;
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
     
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = './pages/series.css';
-    document.head.appendChild(link);
-  }
-
-  // Function to initialize series page
-  function initSeriesPage() {
-    // This would contain any initialization code needed for the series page
-    // You might need to call functions from your original script.js here
-  }
+    // SPA Navigation functionality
+    const mainContent = document.querySelector('.tvshows-content');
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    
+    // Handle Watch Now button click (Severance)
+    document.querySelector('.watch-btn a[href="./pages/series.html"]')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSeriesPage();
+    });
+    
+    // Handle Home navigation
+    document.querySelectorAll('nav a[href="#home"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            showMainPage();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+    
+    // Function to show series page
+    function showSeriesPage() {
+        window.location.href = './pages/series.html';
+    }
+    
+    // Function to show main page
+    function showMainPage() {
+        // This would be used if we were doing full SPA navigation
+        // Currently just redirects to the series page
+    }
+    
+    // Watch Now buttons functionality (except Severance)
+    document.querySelectorAll('.watch-btn:not(:has(a))').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const title = this.closest('.card-show').querySelector('h3').textContent;
+            alert(`You clicked to watch "${title}". This is just a demo!`);
+        });
+    });
+    
+    // Responsive adjustments
+    function handleResize() {
+        // Close menu if window is resized to desktop size
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+            toggleMenu();
+        }
+    }
+    
+    window.addEventListener('resize', handleResize);
 });

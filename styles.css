@@ -1,8 +1,51 @@
-:root {
-    --noise-texture: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
-    --gif-texture: url(https://64.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gifv);
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 :root {
     --primary-color: #000000;
@@ -10,10 +53,9 @@
     --hover-color: #f93333;
     --text-color: #F0F6F7;
     --card-bg: rgb(0, 44, 85);
-    --header-bg: rgba(0, 44, 85, 0.9);
+    --header-bg: rgba(15, 23, 42, 0.8);
     --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
 
 * {
     margin: 0;
@@ -31,17 +73,13 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
-
-    /* Glass morphism effect */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-
     overflow: hidden;
 }
 
-/* Shimmer animation for extra effect */
 .transition-overlay::after {
     content: '';
     position: absolute;
@@ -64,7 +102,6 @@
     0% {
         transform: translateX(-100%) rotate(30deg);
     }
-
     100% {
         transform: translateX(100%) rotate(30deg);
     }
@@ -72,26 +109,20 @@
 
 .transition-overlay.active {
     opacity: 0.9;
-    /* Slightly less than 1 for better glass effect */
     pointer-events: all;
 }
 
-/* Keep the smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* ________________________________________________________________________________ */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--secondary-color);
-    /* background-image: var(--noise-texture), var(--gif-texture); */
-    background-image: url("././images/smpte-color-bars-5791787_1280.webp");
-
+    background-image: url("./images/smpte-color-bars-5791787_1280.webp");
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
-
 }
 
 .container {
@@ -106,10 +137,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: var(--primary-color);
+    background: var(--header-bg);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    background-color: rgba(15, 23, 42, 0.8);
 }
 
 .header-container {
@@ -155,12 +185,9 @@ nav ul li a:hover {
     color: var(--hover-color);
 }
 
-
-
 .signin-btn {
     font-size: 1rem;
     background-color: var(--hover-color);
-
     color: var(--text-color);
     border: none;
     padding: 10px 20px;
@@ -174,10 +201,9 @@ nav ul li a:hover {
 }
 
 /* Tv Shows */
-
 .series-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 2fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 20px;
     padding: 30px 20px;
     margin: 0 auto;
@@ -203,8 +229,6 @@ nav ul li a:hover {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
 }
 
-
-
 /* Image Container */
 .image-serie {
     height: 400px;
@@ -218,7 +242,6 @@ nav ul li a:hover {
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-
 
 .card-show:hover .image-serie img {
     transform: scale(1.05);
@@ -256,8 +279,12 @@ nav ul li a:hover {
 
 .rating-stars {
     color: #ffc107;
-    /* Gold color for stars */
     margin-right: 8px;
+}
+
+.rate-average {
+    font-size: 0.9rem;
+    color: #aaa;
 }
 
 .text-detail {
@@ -287,6 +314,7 @@ nav ul li a:hover {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 0.9rem;
 }
 
 .watch-btn:hover {
@@ -300,31 +328,31 @@ nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-    /* background-color: var(--primary-color); */
     color: white;
     padding: 40px 0 20px;
     backdrop-filter: blur(10px);
-    background-color: rgba(15, 23, 42, 0.8);
-
-
+    background-color: var(--header-bg);
 }
 
 .footer-content {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 30px; */
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     margin-bottom: 40px;
     gap: 30px;
-
 }
 
-.footer-logo {
+.footer-about {
+    flex: 1;
+    min-width: 300px;
     text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
 }
-
 
 .footer-logo img {
     max-width: 150px;
@@ -333,16 +361,13 @@ footer {
 
 .footer-about p {
     margin-top: 15px;
-    text-align: center;
     color: var(--text-color);
 }
 
-
-
-
 .footer-links {
     flex: 1;
-    margin-top: 2%;
+    min-width: 300px;
+    margin-top: 0;
 }
 
 .footer-links h3 {
@@ -355,9 +380,9 @@ footer {
 .footer-links ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .footer-links ul li {
@@ -388,7 +413,6 @@ footer {
 
 .social-icons a:hover {
     color: var(--hover-color);
-
 }
 
 .copyright {
@@ -399,35 +423,16 @@ footer {
 
 .copyright p {
     margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
-
-
-
-/* Responsive */
-
-/* Header improvements for mobile */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
+.mt-2 {
+    margin-top: 10px;
 }
-
-
 
 /* Burger Menu Styles */
 .burger-menu {
     display: none;
-    /* Hidden by default on desktop */
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
@@ -450,13 +455,19 @@ footer {
 }
 
 /* Mobile styles */
+@media (max-width: 1024px) {
+    .series-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .image-serie {
+        height: 350px;
+    }
+}
+
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
+        padding: 15px 20px;
     }
 
     .burger-menu {
@@ -469,9 +480,7 @@ footer {
         right: -100%;
         width: 70%;
         height: 100vh;
-        background: var(--primary-color);
-        backdrop-filter: blur(10px);
-        background-color: rgba(15, 23, 42, 0.95);
+        background-color: var(--header-bg);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -512,5 +521,47 @@ footer {
 
     .burger-menu.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-about, .footer-links {
+        min-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .series-container {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+    
+    .image-serie {
+        height: 300px;
+    }
+    
+    .detail-container {
+        padding: 15px;
+    }
+    
+    .serie-tile {
+        font-size: 1.2rem;
+    }
+    
+    .text-detail {
+        font-size: 0.9rem;
+    }
+    
+    .nav-menu {
+        width: 80%;
+    }
+    
+    .footer-links ul {
+        flex-direction: row;
+        gap: 10px;
     }
 }
