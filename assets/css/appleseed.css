@@ -20,7 +20,7 @@ body {
 
 nav {
   position: fixed;
-  height: 6vh;
+  height: 8vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 1);
   border-bottom: 1px solid #272832;
@@ -128,7 +128,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../appleseed_assets/background_img.jpeg");
+  background-image: url("./assets/background_img.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -270,7 +270,7 @@ p {
   content: "";
   position: absolute;
   inset: 0; /* top, right, bottom, left à 0 */
-  background-image: url("../appleseed_assets/caroussel1.jpeg");
+  background-image: url("./assets/caroussel1.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -293,7 +293,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(../appleseed_assets/mecha_hd_png-Picsart-BackgroundRemover.jpg);
+  background-image: url(./assets/mecha_hd_png-Picsart-BackgroundRemover.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
