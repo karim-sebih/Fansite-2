@@ -27,6 +27,14 @@ body {
   
 }
 
+nav{
+    font-family: "Game of Squids", sans-serif;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
 
 a {
     text-decoration: none;
