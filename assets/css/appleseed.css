@@ -270,7 +270,7 @@ p {
   content: "";
   position: absolute;
   inset: 0; /* top, right, bottom, left à 0 */
-  background-image: url("./assets/caroussel1.jpeg");
+  background-image: url("/assets/appleseed_assets/caroussel1.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -293,7 +293,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(./assets/mecha_hd_png-Picsart-BackgroundRemover.jpg);
+  background-image: url(/assets/appleseed_assets/mecha_hd_png-Picsart-BackgroundRemover.jpg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
