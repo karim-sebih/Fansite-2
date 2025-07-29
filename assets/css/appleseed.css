@@ -128,7 +128,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./assets/background_img.jpeg");
+  background-image: url("/assets/appleseed_assets/background_img.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
